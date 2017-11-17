@@ -4,12 +4,10 @@ import {MainComponent} from './main/main';
 import {AboutComponent} from './about/about';
 import {ContactComponent} from './contact/contact';
 import { DataService } from './services/data.service';
-import { APP_PROVIDERS } from './app.providers';
 
 @Component({
   selector: 'fountain-root',
-  template: require('./routes.html'),
-  providers: APP_PROVIDERS
+  template: require('./routes.html')
 })
 export class RootComponent implements OnInit{
 
