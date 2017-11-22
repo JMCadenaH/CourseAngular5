@@ -15,4 +15,12 @@ export class ContactComponent implements OnInit {
         console.log(agents);
 
     }
+
+    getAvailableAgents() {
+        this._contactService.getAvailableAgents()
+            .subscribe(
+            value => console.log(value),
+            error => console.log(error),
+            () => console.log('Complete'));
+    }
 }

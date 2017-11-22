@@ -19,6 +19,7 @@ import { AboutComponent } from './about/about';
 import { ContactComponent } from './contact/contact';
 import { PersonItem } from './main/person-item/person-item';
 import { APP_PROVIDERS } from './app.providers';
+import { ReactiveComponent } from "./reactive/reactive";
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -46,7 +47,8 @@ export const MATERIAL_COMPONENTS = [
     MainComponent,
     AboutComponent,
     ContactComponent,
-    PersonItem
+    PersonItem,
+    ReactiveComponent
   ],
   providers: APP_PROVIDERS,
   bootstrap: [RootComponent]

@@ -1,20 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {MainComponent} from './main/main';
-import {AboutComponent} from './about/about';
-import {ContactComponent} from './contact/contact';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { MainComponent } from './main/main';
+import { AboutComponent } from './about/about';
+import { ContactComponent } from './contact/contact';
 import { DataService } from './services/data.service';
+import { ReactiveComponent } from "./reactive/reactive";
 
 @Component({
   selector: 'fountain-root',
   template: require('./routes.html')
 })
-export class RootComponent implements OnInit{
+export class RootComponent implements OnInit {
 
   isLoading: boolean = false;
   constructor(private _data: DataService) { }
-  
-  ngOnInit(){ 
+
+  ngOnInit() {
     this._data
       .getIsLoadingEvent()
       .subscribe(x => {
@@ -36,6 +37,10 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'reactive',
+    component: ReactiveComponent
   }
 ];
 
