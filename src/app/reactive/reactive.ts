@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from "../services/contact.service";
+import { Game } from "../model/game";
 
 @Component({
     selector: 'reactive',
